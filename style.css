@@ -32,6 +32,11 @@ body {
   font-size: 3rem;
 }
 
+.blured {
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+
 .main-page-container:before {
   content: " ";
   display: block;
@@ -54,6 +59,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #000000;
+  opacity: 0.5;
 }
 
 header .main-navigation {
@@ -70,6 +77,26 @@ header .main-navigation {
   color: #afa17e;
   padding: 0 2rem;
   width: 100%;
+}
+
+header .main-navigation .main-login-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+header .main-navigation .main-login-button p {
+  margin: 0 20px 0;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 header .main-navigation a {

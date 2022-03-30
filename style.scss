@@ -3,7 +3,6 @@ $color-nav: #afa17e;
 $main-font-color: #ffffff;
 $background-color: #000000;
 
-
 body {
   margin: 0;
   font-family: $main-font;
@@ -30,6 +29,9 @@ body {
     }
   }
 }
+.blured {
+  filter: blur(10px);
+}
 
 .main-page-container:before {
   content: " ";
@@ -51,6 +53,8 @@ header {
   z-index: 1;
   width: 100%;
   display: flex;
+  background-color: $background-color;
+  opacity: 0.5;
 
   .main-navigation {
     display: flex;
@@ -61,6 +65,17 @@ header {
     padding: 0 2rem;
     width: 100%;
 
+    .main-login-button {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      p {
+        margin: 0 20px 0;
+        color: $main-font-color;
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+    }
     a {
       text-transform: uppercase;
     }
