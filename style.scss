@@ -1,0 +1,138 @@
+$main-font: "Lato";
+$color-nav: #afa17e;
+$main-font-color: #ffffff;
+$background-color: #000000;
+
+
+body {
+  margin: 0;
+  font-family: $main-font;
+}
+
+.main-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  background-color: $background-color;
+
+  .main-heading {
+    color: $main-font-color;
+    text-align: center;
+    position: relative;
+
+    p {
+      text-transform: uppercase;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.main-page-container:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("./Resources/bg-image.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  background-color: $background-color;
+}
+
+header {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+
+  .main-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    color: $color-nav;
+    padding: 0 2rem;
+    width: 100%;
+
+    a {
+      text-transform: uppercase;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+
+      .nav-links {
+        list-style: none;
+      }
+    }
+
+    .main-login-button {
+      .login-button {
+        background-color: $color-nav;
+        border-radius: 15px;
+        color: $background-color;
+        padding: 6px 30px;
+      }
+    }
+  }
+}
+
+.modal-wrapper {
+  width: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+
+  .close-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0.6rem 1rem 0 0;
+  }
+  .modal-container {
+    background-color: $main-font-color;
+    display: flex;
+    flex-direction: column;
+    border: solid grey;
+    border-radius: 10px;
+
+    .modal-container-padding {
+      padding: 0 2rem;
+      .modal-text {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+      .privacy-policy-text {
+        font-size: 10px;
+        text-align: center;
+      }
+      form {
+        input {
+          padding: 6px 30px;
+          border-radius: 6px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          margin-bottom: 0.7rem;
+          width: 100%;
+          height: 38px;
+        }
+
+        .submit-button {
+          background-color: $color-nav;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
