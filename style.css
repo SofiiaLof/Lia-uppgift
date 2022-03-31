@@ -30,6 +30,7 @@ body {
 
 .main-page-container .main-heading h1 {
   font-size: 55px;
+  font-family: "Cormorant Garamond";
 }
 
 .blured {
@@ -59,8 +60,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #000000;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 header .main-navigation {
@@ -121,14 +121,11 @@ header .main-navigation .nav-items a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 header .main-navigation .nav-items .icon {
   display: none;
-}
-
-header .main-navigation .nav-items .nav-links {
-  list-style: none;
 }
 
 header .main-navigation .main-login-button .login-button {
@@ -137,6 +134,8 @@ header .main-navigation .main-login-button .login-button {
   color: #000000;
   padding: 6px 30px;
   white-space: nowrap;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .modal-wrapper {
@@ -171,6 +170,7 @@ header .main-navigation .main-login-button .login-button {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   padding: 0.6rem 1rem 0 0;
+  cursor: pointer;
 }
 
 .modal-wrapper .modal-container .modal-container-padding {
@@ -192,7 +192,7 @@ header .main-navigation .main-login-button .login-button {
 }
 
 .modal-wrapper .modal-container .modal-container-padding form input {
-  padding: 6px 30px;
+  padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
   -webkit-box-sizing: border-box;
@@ -205,9 +205,10 @@ header .main-navigation .main-login-button .login-button {
 .modal-wrapper .modal-container .modal-container-padding form .submit-button {
   background-color: #afa17e;
   cursor: pointer;
+  color: white;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 840px) {
   header .main-navigation {
     padding: 0 1rem;
   }
@@ -245,13 +246,13 @@ header .main-navigation .main-login-button .login-button {
     display: block;
     text-align: left;
   }
-  header .main-navigation .nav-items.expand a:first-child {
-    margin-top: 40px;
-  }
   header .main-navigation .main-login-button {
     -ms-flex-item-align: start;
         align-self: flex-start;
     padding-top: 20px;
+  }
+  .main-heading {
+    padding: 0 10%;
   }
 }
 /*# sourceMappingURL=style.css.map */
