@@ -29,7 +29,7 @@ body {
 }
 
 .main-page-container .main-heading h1 {
-  font-size: 3rem;
+  font-size: 55px;
 }
 
 .blured {
@@ -137,17 +137,6 @@ header .main-navigation .main-login-button .login-button {
   z-index: 20;
 }
 
-.modal-wrapper .close-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  padding: 0.6rem 1rem 0 0;
-}
-
 .modal-wrapper .modal-container {
   background-color: #ffffff;
   display: -webkit-box;
@@ -159,6 +148,17 @@ header .main-navigation .main-login-button .login-button {
           flex-direction: column;
   border: solid grey;
   border-radius: 10px;
+}
+
+.modal-wrapper .modal-container .close-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 0.6rem 1rem 0 0;
 }
 
 .modal-wrapper .modal-container .modal-container-padding {
@@ -173,6 +173,10 @@ header .main-navigation .main-login-button .login-button {
 .modal-wrapper .modal-container .modal-container-padding .privacy-policy-text {
   font-size: 10px;
   text-align: center;
+}
+
+.modal-wrapper .modal-container .modal-container-padding .privacy-policy-text span {
+  text-decoration: underline;
 }
 
 .modal-wrapper .modal-container .modal-container-padding form input {
