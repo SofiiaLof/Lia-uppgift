@@ -4,12 +4,11 @@ $(document).ready(function(){
     const names = new Names();
 
     $(".login-button").click(function(){
-        if($(".modal-wrapper").is(':hidden')){
-            $(".modal-wrapper").show();
-            $(".main-page-container").addClass("blured");
-            
-        }
-     
+        
+     if($(".modal-wrapper").is(':hidden')){
+      $(".modal-wrapper").show();
+      $(".main-page-container").addClass("blured");
+     }
     });
 
     $(".close-icon").click(function(){
@@ -45,10 +44,18 @@ $(document).ready(function(){
         $(".main-login-button").append(pElement);
         $(".main-page-container").removeClass("blured");
         $(".modal-wrapper").hide();
-        $(".login-button").html("Logga ut");
+        $(".login-button").text("Logga ut");
 
 
     });
+
+    
+
+      $("#hamburger-icon").click(function(){
+
+        $("#navigation").toggleClass("expand");
+      });
+    
   });
 
 class Names{

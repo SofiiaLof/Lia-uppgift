@@ -73,9 +73,8 @@ header .main-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 67px;
   color: #afa17e;
-  padding: 0 2rem;
+  padding: 0 3rem;
   width: 100%;
 }
 
@@ -93,14 +92,12 @@ header .main-navigation .main-login-button {
 }
 
 header .main-navigation .main-login-button p {
-  margin: 0 20px 0;
+  margin: 0 10px 0;
   color: #ffffff;
   text-transform: uppercase;
   font-size: 10px;
-}
-
-header .main-navigation a {
-  text-transform: uppercase;
+  text-align: right;
+  max-width: 200px;
 }
 
 header .main-navigation .nav-items {
@@ -113,7 +110,21 @@ header .main-navigation .nav-items {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  overflow: hidden;
+}
+
+header .main-navigation .nav-items a {
+  float: left;
+  display: block;
+  white-space: nowrap;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+header .main-navigation .nav-items .icon {
+  display: none;
 }
 
 header .main-navigation .nav-items .nav-links {
@@ -125,6 +136,7 @@ header .main-navigation .main-login-button .login-button {
   border-radius: 15px;
   color: #000000;
   padding: 6px 30px;
+  white-space: nowrap;
 }
 
 .modal-wrapper {
@@ -193,5 +205,53 @@ header .main-navigation .main-login-button .login-button {
 .modal-wrapper .modal-container .modal-container-padding form .submit-button {
   background-color: #afa17e;
   cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  header .main-navigation {
+    padding: 0 1rem;
+  }
+  header .main-navigation .nav-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  header .main-navigation .nav-items a:not(:last-child) {
+    display: none;
+  }
+  header .main-navigation .nav-items a {
+    padding: 15px 0 15px 0;
+  }
+  header .main-navigation .nav-items #logo-img {
+    display: none;
+  }
+  header .main-navigation .nav-items .icon {
+    display: block;
+    font-size: 30px;
+  }
+  header .main-navigation .nav-items a:last-child {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header .main-navigation .nav-items.expand {
+    position: relative;
+  }
+  header .main-navigation .nav-items.expand a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  header .main-navigation .nav-items.expand a:first-child {
+    margin-top: 40px;
+  }
+  header .main-navigation .main-login-button {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    padding-top: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

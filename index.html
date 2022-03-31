@@ -15,12 +15,12 @@
   <body>
     <header>
       <nav class="main-navigation">
-        <div class="nav-items">
-          <img src="./Resources/test-logga.svg" />
-
-          <li class="nav-links"><a>Produkter</a></li>
-          <li class="nav-links"><a>Om oss</a></li>
-          <li class="nav-links"><a>Beställning</a></li>
+        <div class="nav-items" id="navigation">
+          <a><img id="logo-img" src="./Resources/test-logga.svg" /></a>
+          <a>Produkter</a>
+          <a>Om oss</a>
+          <a>Beställning</a>
+          <a class="icon" id="hamburger-icon">&#9776;</a>
         </div>
         <div class="main-login-button">
           <a class="nav-links login-button" type="button">Logga in</a>
@@ -48,7 +48,12 @@
           <div class="modal-form">
             <form>
               <input id="name-input" placeholder="Namn" />
-              <input id="submit-btn" class="submit-button" type="button" value="Logga in" />
+              <input
+                id="submit-btn"
+                class="submit-button"
+                type="button"
+                value="Logga in"
+              />
             </form>
             <p class="privacy-policy-text">
               Genom att logga in godkänner du <span><a>våra villkor</a></span>
