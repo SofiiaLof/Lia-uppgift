@@ -16,6 +16,8 @@ body {
   position: relative;
   height: 100vh;
   background-color: #000000;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .main-page-container .main-heading {
@@ -35,8 +37,9 @@ body {
 }
 
 .blured {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  background: #000000 0% 0% no-repeat padding-box;
 }
 
 .main-page-container:before {
@@ -62,6 +65,8 @@ header {
   display: -ms-flexbox;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 header .main-navigation {
@@ -184,6 +189,9 @@ header .main-navigation .main-login-button .login-button {
           transform: translate(-50%, -50%);
   z-index: 20;
   width: 340px;
+  min-width: 340px;
+  height: 270px;
+  min-height: 270px;
 }
 
 .modal-wrapper .modal-container {

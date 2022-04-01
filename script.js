@@ -12,9 +12,9 @@ $(document).ready(function () {
 
     if (buttonValue === "Logga ut") {
       $(".login-button").text("Logga in");
-      $(".welcome-text").hide();
+      $(".welcome-text").hide('fade');
     } else {
-      $(".modal-wrapper").show();
+      $(".modal-wrapper").show("fade");
       $(".main-page-container").addClass("blured");
       $(".main-header").addClass("blured");
     }
@@ -22,7 +22,7 @@ $(document).ready(function () {
 
   //When close icon is clicked modal form disappears and blured effect is removed
   $(".close-icon").click(function () {
-    $(".modal-wrapper").hide();
+    $(".modal-wrapper").hide("fade");
     $(".main-page-container").removeClass("blured");
     $(".main-header").removeClass("blured");
   });
@@ -38,29 +38,31 @@ $(document).ready(function () {
     let pElement;
 
     let storage = JSON.parse(localStorage.getItem("userName"));
-
+if(inputValue){
     if (storage === null) {
-      names.addNames(inputValue);
-      pElement = $("<p></p>").text("Du är inloggad som ");
-      pElement.append(inputBold);
-      pElement.addClass("welcome-text");
-    } else {
-      if (storage.includes(inputValue)) {
-        pElement = $("<p></p>").text("Välkommen tillbaka! Du är inloggad som ");
-        pElement.append(inputBold);
-        pElement.addClass("welcome-text");
-      } else {
         names.addNames(inputValue);
         pElement = $("<p></p>").text("Du är inloggad som ");
         pElement.append(inputBold);
         pElement.addClass("welcome-text");
+      } else {
+        if (storage.includes(inputValue)) {
+          pElement = $("<p></p>").text("Välkommen tillbaka! Du är inloggad som ");
+          pElement.append(inputBold);
+          pElement.addClass("welcome-text");
+        } else {
+          names.addNames(inputValue);
+          pElement = $("<p></p>").text("Du är inloggad som ");
+          pElement.append(inputBold);
+          pElement.addClass("welcome-text");
+        }
       }
-    }
-    $("#name-input").val('');
-    $(".main-login-button").append(pElement);
-    $(".main-page-container").removeClass("blured");
-    $(".modal-wrapper").hide();
-    $(".login-button").text("Logga ut");
+      $("#name-input").val('');
+      $(".main-login-button").append(pElement);
+      $(".main-page-container").removeClass("blured");
+      $(".modal-wrapper").hide("fade");
+      $(".login-button").text("Logga ut");
+}
+    
   });
 
   //Hamburger menu toggle
