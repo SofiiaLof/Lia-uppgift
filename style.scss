@@ -24,6 +24,7 @@ body {
 
     p {
       text-transform: uppercase;
+      font-size: 14px;
     }
 
     h1 {
@@ -64,14 +65,17 @@ header {
     justify-content: space-between;
     align-items: center;
     color: $color-nav;
-    padding: 0 3rem;
+    padding: 0 100px;
     width: 100%;
 
     .main-login-button {
       display: flex;
       align-items: center;
       flex-direction: row-reverse;
+      height: 28px;
+      font-size: 15px;
 
+     
       p {
         margin: 0 10px 0;
         color: $main-font-color;
@@ -92,15 +96,53 @@ header {
         float: left;
         display: block;
         white-space: nowrap;
-        padding: 10px;
+        padding: 10px 0 10px 51px;
         text-align: center;
         text-decoration: none;
         text-transform: uppercase;
         cursor: pointer;
+
+        background-image: linear-gradient(
+          to right,
+          $main-font-color 50%,
+          $main-font-color 50%,
+          $color-nav 50%
+        );
+
+        background-size: 200% 100%;
+        background-position: -100%;
+        position: relative;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
       }
 
+      a:first-child{
+         padding-right: 0;
+      }
       .icon {
         display: none;
+      }
+
+      a:before {
+        content: "";
+        background: $color-nav;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      a:hover {
+        background-position: 0;
+      }
+
+      a:hover::before {
+        width: 100%;
       }
     }
 
@@ -112,26 +154,27 @@ header {
         padding: 6px 30px;
         white-space: nowrap;
         text-transform: uppercase;
-        cursor:pointer;
+        cursor: pointer;
       }
     }
   }
 }
 
 .modal-wrapper {
-  width: 300px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 20;
+  width: 340px;
+ 
 
   .modal-container {
     background-color: $main-font-color;
     display: flex;
     flex-direction: column;
-    border: solid grey;
     border-radius: 10px;
+   
 
     .close-icon {
       display: flex;
@@ -141,11 +184,16 @@ header {
     }
 
     .modal-container-padding {
-      padding: 0 2rem;
+      padding: 0 3rem 1.5rem 3rem;
 
       .modal-text {
         width: 100%;
         margin-bottom: 12px;
+
+        p {
+          margin-top: -11px;
+          margin-bottom: 20px;
+        }
       }
 
       .privacy-policy-text {
@@ -172,6 +220,7 @@ header {
           background-color: $color-nav;
           cursor: pointer;
           color: white;
+          
         }
       }
     }
@@ -205,6 +254,10 @@ header {
         a:last-child {
           font-size: 30px;
           cursor: pointer;
+          -webkit-text-fill-color: unset;
+        }
+        a:last-child:before {
+          display: none;
         }
       }
       .nav-items.expand {
@@ -223,6 +276,6 @@ header {
     }
   }
   .main-heading {
-    padding: 0 10%;
+    padding: 0 5%;
   }
 }
